@@ -7,7 +7,7 @@
 #include "lab_2.h"
 using namespace std;
 
-// �뢮� ࠧ��஢ �᭮���� ⨯�� ������
+// вывод размеров основных типов данных
 void print_size(){
     cout << "bool:\t\t" << sizeof(bool) << " bytes" << endl;
     cout << "char:\t\t" << sizeof(char) << " bytes" << endl;
@@ -15,7 +15,7 @@ void print_size(){
     cout << "long long:\t" << sizeof(long long) << " bytes" << endl;
     cout << "float:\t\t" << sizeof(float) << " bytes" << endl;
     cout << "double:\t\t" << sizeof(double) << " bytes" << endl;
-    // �뢮� �� ࠧ�� ����䨪��� ����� � ࠧ���
+    // вывод по разным модификациям длины и размера
     cout << "short:\t\t" << sizeof(short) << " bytes" << endl;
     cout << "signed int:\t" << sizeof(signed int) << " bytes" << endl;
     cout << "unsigned int:\t" << sizeof(unsigned int) << " bytes" << endl;
@@ -28,101 +28,101 @@ void print_size(){
 }
 
 void print_diapazon(){
-  //�뢮� �������襣� � �������襣� �ᥫ ���������
-  cout << "�������襥 �᫮ char : \n" <<
+  //вывод наименьшего и наибольшего чисел диапазона
+  cout << "Наименьшее число char : \n" <<
   static_cast<int>(numeric_limits<char>::min()) << '\n';
-  cout << "�������襥 �᫮ char : \n" <<
+  cout << "Наибольшее число char : \n" <<
   static_cast<int>(numeric_limits<char>::max()) << '\n';
-  cout << "�������襥 �᫮ short : \n" <<
+  cout << "Наименьшее число short : \n" <<
   numeric_limits <short>::min()<< '\n';
-  cout << "�������襥 �᫮ short : \n" <<
+  cout << "Наибольшее число short : \n" <<
   numeric_limits <short>::max() << '\n';
-  cout << "�������襥 �᫮ signed int : \n" <<
+  cout << "Наименьшее число signed int : \n" <<
   numeric_limits<signed>::min() << '\n';
-  cout << "�������襥 �᫮ signed int : \n" <<
+  cout << "Наибольшее число signed int : \n" <<
   numeric_limits<signed>::max() << '\n';
-  cout << "�������襥 �᫮ unsigned int : \n" <<
+  cout << "Наименьшее число unsigned int : \n" <<
   numeric_limits<unsigned>::min() << '\n';
-  cout << "�������襥 �᫮ unsigned int : \n" <<
+  cout << "Наибольшее число unsigned int : \n" <<
   numeric_limits<unsigned>::max() << '\n';
-  cout << "�������襥 �᫮ long long int : \n" <<
+  cout << "Наименьшее число long long int : \n" <<
   numeric_limits<long long>::min() << '\n';
-  cout << "�������襥 �᫮ long long int : \n" <<
+  cout << "Наибольшее число long long int : \n" <<
   numeric_limits<long long>::max() << '\n';
-  cout<<"�������襥 �᫮ float \n: "<<
+  cout<<"Наименьшее число float \n: "<<
   numeric_limits<float>::lowest()<<'\n';
-  cout <<"�������襥 �᫮ float \n: "<<
+  cout <<"Наибольшее число float \n: "<<
   numeric_limits<float>::max()<<'\n';
-  cout<<"�������襥 �᫮ double \n: "<<
+  cout<<"Наименьшее число double \n: "<<
   numeric_limits<double>::lowest()<<'\n';
-  cout<<"�������襥 �᫮ double \n: "<<
+  cout<<"Наибольшее число double \n: "<<
   numeric_limits<double>::max()<<'\n';
   }
-//�࣠����� �뢮� �᫮���� ��������� ⨯�� ������ � hex, dec, bin (��� �� ���� ⨯��):
+//Организуйте вывод числового диапазона типов данных в hex, dec, bin (хотя бы пять типов):
 
 void print_diapazon_bin(){
   bitset<8> bits_1(static_cast<int>(numeric_limits<char>::min()));
-  cout << "�������쭮� �᫮ char: \n" << bits_1 << '\n';
+  cout << "Минимальное число char: \n" << bits_1 << '\n';
   bitset<8> bits_2(static_cast<int>(numeric_limits<char>::max()));
-  cout << "���ᨬ��쭮� �᫮ char: \n" << bits_2 << "\n\n";
+  cout << "Максимальное число char: \n" << bits_2 << "\n\n";
   bitset<16> morebits_16_3(numeric_limits <short>::min());
-  cout << "�������쭮� �᫮ short: \n" << morebits_16_3 << '\n';
+  cout << "Минимальное число short: \n" << morebits_16_3 << '\n';
   bitset<16> morebits_16_4(numeric_limits <short>::max());
-  cout << "���ᨬ��쭮� �᫮ short: \n" << morebits_16_4 << "\n\n";
+  cout << "Максимальное число short: \n" << morebits_16_4 << "\n\n";
   bitset<32> morebits_32_5(numeric_limits<signed>::min());
-  cout << "�������쭮� �᫮ signed: \n" << morebits_32_5 << '\n';
+  cout << "Минимальное число signed: \n" << morebits_32_5 << '\n';
   bitset<32> morebits_32_6(numeric_limits<signed>::max());
-  cout << "���ᨬ��쭮� �᫮ signed: \n" << morebits_32_6 << "\n\n";
+  cout << "Максимальное число signed: \n" << morebits_32_6 << "\n\n";
   bitset<32> morebits_32_7(numeric_limits<unsigned>::min());
-  cout << "�������쭮� �᫮ unsigned: \n" << morebits_32_7 << '\n';
+  cout << "Минимальное число unsigned: \n" << morebits_32_7 << '\n';
   bitset<32> morebits_32_8(numeric_limits<unsigned>::max());
-  cout << "���ᨬ��쭮� �᫮ unsigned: \n" << morebits_32_8 << "\n\n";
+  cout << "Максимальное число unsigned: \n" << morebits_32_8 << "\n\n";
   bitset<64> morebits_64_9(numeric_limits<long long>::min());
-  cout << "�������쭮� �᫮ long long: \n" << morebits_64_9 << '\n';
+  cout << "Минимальное число long long: \n" << morebits_64_9 << '\n';
   bitset<64> morebits_64_10(numeric_limits<long long>::max());
-  cout << "���ᨬ��쭮� �᫮ long long: \n" << morebits_64_10 << '\n';
+  cout << "Максимальное число long long: \n" << morebits_64_10 << '\n';
   }
 
 void vyvod_printf(){
-char c[]= "�뢮� �।���� ��������� � printf";
+char c[]= "Вывод пределов диапазона в printf";
 printf ("%s\n", c);
-char h[]= "��᫮��� �������� � 8-� �ଠ�";
+char h[]= "Числовой диапазон в 8-м формате";
 printf ("%s\n", h);
-char k1[] = "��᫮��� �������� short: ��";
+char k1[] = "Числовой диапазон short: от";
 short t1 = numeric_limits<short>::min();
-char k2[] = " �� ";
+char k2[] = " до ";
 short t2 = numeric_limits<short>::max();
 printf ("%s\n%od%s%od\n\n",k1,t1,k2,t2);
-char u[] = "��᫮��� �������� � 16-� �ଠ�";
+char u[] = "Числовой диапазон в 16-м формате";
 printf ("%s\n", u);
-char s1[] = "��᫮��� �������� short: �� ";
+char s1[] = "Числовой диапазон short: от ";
 short d1 = numeric_limits<short>::min();
-char s2[] = " �� ";
+char s2[] = " до ";
 short d2 = numeric_limits<short>::max();
 printf ("%s\nxd%s%xd\n",s1,d1,s2,d2);
-char s3[] = "��᫮��� �������� float: �� ";
+char s3[] = "Числовой диапазон float: от ";
 float d3 = numeric_limits<float>::min();
-char s4[] = " �� ";
+char s4[] = " до ";
 float d4 = numeric_limits<float>::max();
 printf ("%s\n%fd%s%%fd\n",s3,d3,s4,d4);
 }
 
 void task2(){
-  cout << "�뢮� ࠧ��஢ ⨯��"  << '\n';
+  cout << "Вывод размеров типов"  << '\n';
   print_size();
-  cout << "��᫮��� �������� � 10-� �ଠ� "  << '\n';
+  cout << "Числовой диапазон в 10-м формате "  << '\n';
   print_diapazon();
   cout.unsetf(ios::dec);//8-naya
   cout.setf(ios::oct);
-  cout << "��᫮��� �������� � 8-� �ଠ� "  << '\n';
+  cout << "Числовой диапазон в 8-м формате "  << '\n';
   print_diapazon();
   cout.unsetf(ios::oct);// 16-naya
   cout.setf(ios::hex);
-  cout << "��᫮��� �������� � 16-� �ଠ� "  << '\n';
+  cout << "Числовой диапазон в 16-м формате "  << '\n';
   print_diapazon();
-  cout << "��᫮��� �������� � 2-� �ଠ�" << "\n";
+  cout << "Числовой диапазон в 2-м формате" << "\n";
   cout.unsetf(ios::hex);
   print_diapazon_bin();
-  cout << "��᫮��� �������� � printf" << "\n";
+  cout << "Числовой диапазон в printf" << "\n";
   vyvod_printf();
   }
